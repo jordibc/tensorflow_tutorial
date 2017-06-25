@@ -1,20 +1,20 @@
 digraph G {
-  x [shape=diamond];
-  W [shape=box];
-  b [shape=box];
-  y_ [shape=diamond];
+  x [shape=diamond,color=red,fontcolor=red];
+  W [shape=box,color=blue,fontcolor=blue];
+  b [shape=box,color=blue,fontcolor=blue];
+  y_ [shape=diamond,color=red,fontcolor=red];
   x -> y;
   W -> y;
   b -> y;
   y -> cross_entropy;
   y_ -> cross_entropy;
   cross_entropy -> train_step;
-  data_batch [label="x: batch_xs\ny_: batch_ys",style="dotted"];
+  data_batch [label="x: batch_xs\ny_: batch_ys",style=dotted,fontcolor=red];
   data_batch -> train_step [style=dotted];
   y -> correct_prediction;
   y_ -> correct_prediction;
   correct_prediction -> accuracy;
-  data_all [label="x: images,\ny_: labels",style="dotted"];
+  data_all [label="x: images,\ny_: labels",style=dotted,fontcolor=red];
   data_all -> accuracy [style=dotted];
 }
 # Convert into an image with: dot -Tpng -o tutorial_02.png tutorial_02.dot
