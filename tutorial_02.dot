@@ -9,12 +9,12 @@ digraph G {
   y -> cross_entropy;
   y_ -> cross_entropy;
   cross_entropy -> train_step;
-  data_batch [label="{x: batch_xs,\ny_: batch_ys}",style="dotted"];
+  data_batch [label="x: batch_xs\ny_: batch_ys",style="dotted"];
   data_batch -> train_step [style=dotted];
   y -> correct_prediction;
   y_ -> correct_prediction;
   correct_prediction -> accuracy;
-  data_all [label="{x: images,\ny_: labels}",style="dotted"];
+  data_all [label="x: images,\ny_: labels",style="dotted"];
   data_all -> accuracy [style=dotted];
 }
 # Convert into an image with: dot -Tpng -o tutorial_02.png tutorial_02.dot
