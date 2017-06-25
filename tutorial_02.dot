@@ -3,6 +3,7 @@ digraph G {
   W [shape=box,color=blue,fontcolor=blue];
   b [shape=box,color=blue,fontcolor=blue];
   y_ [shape=diamond,color=red,fontcolor=red];
+  train_step [fontcolor=blue];
   x -> y;
   W -> y;
   b -> y;
